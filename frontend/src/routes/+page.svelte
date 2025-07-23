@@ -288,19 +288,6 @@
     </div>
 </section>
 
-<!-- Enlaces rápidos a las nuevas páginas -->
-<section class="quicklinks-section">
-    <div class="container">
-        <h2 class="quicklinks-title">Acceso rápido</h2>
-        <div class="quicklinks-grid">
-            <a class="quicklink" href="/auth/login">Iniciar sesión</a>
-            <a class="quicklink" href="/auth/register">Registrarse</a>
-            <a class="quicklink" href="/empresa/dashboard">Panel Empresa</a>
-            <a class="quicklink" href="/candidato/dashboard">Panel Candidato</a>
-        </div>
-    </div>
-</section>
-
 <!-- Footer -->
 <footer class="footer-modern">
     <div class="footer-container">
@@ -314,9 +301,9 @@
             <a href="#contacto">Contacto</a>
         </div>
         <div class="footer-social">
-            <a href="#" aria-label="Twitter" class="footer-social-icon">🐦</a>
-            <a href="#" aria-label="LinkedIn" class="footer-social-icon">💼</a>
-            <a href="#" aria-label="Instagram" class="footer-social-icon">📷</a>
+            <a href="/" aria-label="Twitter" class="footer-social-icon">🐦</a>
+            <a href="/" aria-label="LinkedIn" class="footer-social-icon">💼</a>
+            <a href="/" aria-label="Instagram" class="footer-social-icon">📷</a>
         </div>
     </div>
     <div class="footer-bottom-modern">
@@ -866,7 +853,16 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 828px) {
+        .navbar {
+            display: flex;
+            column-gap: 20px;
+        }
+
+        .hero-section {
+            margin-top: 40px;
+        }
+
         .nav-links {
             display: none;
         }
@@ -879,6 +875,7 @@
         .btn-primary {
             padding: 0.5rem 1rem;
             font-size: 0.9rem;
+            color: black;
         }
 
         .hero-container {
