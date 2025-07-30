@@ -1,5 +1,4 @@
 <script>
-	import { feather } from "feather-icons";
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     import { onMount, afterUpdate } from "svelte";
