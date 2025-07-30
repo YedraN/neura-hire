@@ -1,4 +1,5 @@
 <script>
+	import { feather } from "feather-icons";
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     import { onMount, afterUpdate } from "svelte";
@@ -145,7 +146,7 @@
             <a href="/candidato/dashboard" class="nav-link">Panel Candidato</a>
         </div>
         <div class="nav-cta">
-            <button class="btn-secondary">Iniciar Sesión</button>
+            <button class="btn-secondary" id="btn-login">Iniciar Sesión</button>
             <button class="btn-primary">Registrarse</button>
         </div>
     </div>
@@ -169,15 +170,15 @@
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">10K+</span>
-                    <span class="stat-label">Empresas</span>
+                    <span class="stat-label"><strong>Empresas</strong></span>
                 </div>
                 <div class="stat">
                     <span class="stat-number">50K+</span>
-                    <span class="stat-label">Candidatos</span>
+                    <span class="stat-label"><strong>Candidatos</strong></span>
                 </div>
                 <div class="stat">
                     <span class="stat-number">95%</span>
-                    <span class="stat-label">Satisfacción</span>
+                    <span class="stat-label"><strong>Satisfacción</strong></span>
                 </div>
             </div>
         </div>
@@ -460,6 +461,11 @@
         border-radius: 16px;
     }
 
+    #btn-login {
+        background-color: #764ba2;
+        border: none;
+    }
+
     /* Hero Section */
     .hero-section {
         min-height: 100vh;
@@ -531,7 +537,7 @@
     }
 
     .stat-label {
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(0, 0, 0, 0.8);
         font-size: 0.9rem;
     }
 
