@@ -128,6 +128,8 @@
 <svelte:head>
     <title>NeuraHire - Revoluciona tu proceso de contratación</title>
     <meta name="description" content="Plataforma inteligente de contratación que conecta talento excepcional con empresas innovadoras usando IA avanzada">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d70015ddda.js" crossorigin="anonymous"></script>
 </svelte:head>
 
 <!-- Navbar -->
@@ -180,21 +182,21 @@
             </div>
         </div>
         <div class="hero-image">
-            <div class="floating-card card-1">
+            <div class="floating-card card-1" id="card1">
                 <div class="card-icon">👨‍💼</div>
                 <div class="card-content">
                     <h4>Perfil Completo</h4>
                     <p>Análisis detallado de habilidades</p>
                 </div>
             </div>
-            <div class="floating-card card-2">
+            <div class="floating-card card-2" id="card2">
                 <div class="card-icon">🎯</div>
                 <div class="card-content">
                     <h4>Match Perfecto</h4>
                     <p>IA que encuentra el candidato ideal</p>
                 </div>
             </div>
-            <div class="floating-card card-3">
+            <div class="floating-card card-3" id="card3">
                 <div class="card-icon">⚡</div>
                 <div class="card-content">
                     <h4>Proceso Rápido</h4>
@@ -301,9 +303,9 @@
             <a href="#contacto">Contacto</a>
         </div>
         <div class="footer-social">
-            <a href="/" aria-label="Twitter" class="footer-social-icon">🐦</a>
-            <a href="/" aria-label="LinkedIn" class="footer-social-icon">💼</a>
-            <a href="/" aria-label="Instagram" class="footer-social-icon">📷</a>
+            <a href="/" aria-label="Twitter" class="footer-social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="/" aria-label="LinkedIn" class="footer-social-icon"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="/" aria-label="Instagram" class="footer-social-icon"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </div>
     <div class="footer-bottom-modern">
@@ -907,8 +909,9 @@
         }
 
         .hero-image {
-            height: 400px;
-            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 300px;
         }
 
         .floating-card {
