@@ -145,7 +145,7 @@
             <a href="/candidato/dashboard" class="nav-link">Panel Candidato</a>
         </div>
         <div class="nav-cta">
-            <button class="btn-secondary" id="btn-login">Iniciar Sesión</button>
+            <button class="btn-secondary" id="btn-login"><a href="/auth/login">Iniciar Sesión</a></button>
             <button class="btn-primary">Registrarse</button>
         </div>
     </div>
