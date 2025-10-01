@@ -139,14 +139,12 @@
             <span class="logo-text">NeuraHire</span>
         </div>
         <div class="nav-links">
-            <a href="/auth/login" class="nav-link">Iniciar sesión</a>
-            <a href="/auth/register" class="nav-link">Registrarse</a>
+            <a href="/perfil" class="nav-link">Mi perfil</a>
             <a href="/empresa/dashboard" class="nav-link">Panel Empresa</a>
             <a href="/candidato/dashboard" class="nav-link">Panel Candidato</a>
         </div>
         <div class="nav-cta">
-            <button class="btn-secondary" id="btn-login"><a href="/auth/login">Iniciar Sesión</a></button>
-            <button class="btn-primary">Registrarse</button>
+            <button class="btn-primary"><a href="/perfil">Mi perfil</a></button>
         </div>
     </div>
 </nav>

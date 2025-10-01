@@ -6,7 +6,9 @@
   let role = 'empresa';
   let error = '';
 
-  function handleRegister() {
+  import { goto } from '$app/navigation';
+
+  async function handleRegister() {
     if (!name || !email || !password || !confirm) {
       error = 'Por favor, completa todos los campos.';
       return;
@@ -16,7 +18,22 @@
       return;
     }
     error = '';
-    alert(`Registro como ${role}: ${name} (${email})`);
+    try {
+      const res = await fetch('http://127.0.0.1:8000/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        error = data.detail || 'Error al registrar usuario';
+        return;
+      }
+      // Registro correcto
+      goto('/');
+    } catch (e) {
+      error = 'Error de conexión con el servidor';
+    }
   }
 </script>
 

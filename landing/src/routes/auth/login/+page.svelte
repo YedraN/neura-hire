@@ -4,13 +4,43 @@
   let role = 'empresa';
   let error = '';
 
-  function handleLogin() {
+  import { goto } from '$app/navigation';
+  import { usuario, token } from '$lib/stores.js';
+
+  async function handleLogin() {
     if (!email || !password) {
       error = 'Por favor, completa todos los campos.';
       return;
     }
     error = '';
-    alert(`Login como ${role}: ${email}`);
+    try {
+      const res = await fetch('http://127.0.0.1:8000/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        error = data.detail || 'Error de autenticación';
+        return;
+      }
+      const data = await res.json();
+      token.set(data.access_token);
+      localStorage.setItem('token', data.access_token);
+
+      // Obtener datos del usuario
+      const userRes = await fetch('http://127.0.0.1:8000/auth/me', {
+        headers: { 'Authorization': `Bearer ${data.access_token}` }
+      });
+      if (userRes.ok) {
+        const userData = await userRes.json();
+        usuario.set(userData);
+        localStorage.setItem('usuario', JSON.stringify(userData));
+      }
+      goto('/');
+    } catch (e) {
+      error = 'Error de conexión con el servidor';
+    }
   }
 </script>
 
