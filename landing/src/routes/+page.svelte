@@ -128,7 +128,7 @@
 <svelte:head>
     <title>NeuraHire - Revoluciona tu proceso de contratación</title>
     <meta name="description" content="Plataforma inteligente de contratación que conecta talento excepcional con empresas innovadoras usando IA avanzada">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/d70015ddda.js" crossorigin="anonymous"></script>
 </svelte:head>
 
@@ -380,6 +380,46 @@
         gap: 1rem;
     }
 
+    /* Responsive Navbar */
+    @media (max-width: 900px) {
+        .nav-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .nav-links {
+            gap: 1rem;
+            font-size: 1rem;
+        }
+        .nav-cta {
+            margin-top: 0.5rem;
+        }
+    }
+    @media (max-width: 600px) {
+        .navbar {
+            padding: 0.5rem 0;
+        }
+        .nav-container {
+            padding: 0 10px;
+        }
+        .logo-text {
+            font-size: 1.2rem;
+        }
+        .nav-links {
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        .nav-link {
+            padding: 0.5rem 0.7rem;
+            font-size: 1rem;
+        }
+        .nav-cta {
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+    }
+
     /* Botones */
     .btn-primary {
         background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
@@ -393,18 +433,217 @@
         box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
         position: relative;
         overflow: hidden;
+        font-size: 1rem;
     }
 
-    .btn-primary::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        transition: left 0.5s;
+    .btn-primary.btn-large {
+        font-size: 1.15rem;
+        padding: 1rem 2.2rem;
     }
+
+    .btn-outline {
+        background: transparent;
+        color: #fbbf24;
+        border: 2px solid #fbbf24;
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+    }
+    .btn-outline.btn-large {
+        font-size: 1.15rem;
+        padding: 1rem 2.2rem;
+    }
+
+    @media (max-width: 600px) {
+        .btn-primary, .btn-outline {
+            font-size: 0.95rem;
+            padding: 0.6rem 1.1rem;
+        }
+        .btn-primary.btn-large, .btn-outline.btn-large {
+            font-size: 1rem;
+            padding: 0.8rem 1.5rem;
+        }
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding-top: 6.5rem;
+        background: linear-gradient(120deg, #667eea 0%, #fbbf24 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .hero-content {
+        flex: 1.2;
+        min-width: 0;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+        font-weight: 900;
+        color: #1f2937;
+        margin-bottom: 1.2rem;
+        line-height: 1.1;
+    }
+    .gradient-text {
+        background: linear-gradient(90deg, #667eea 0%, #fbbf24 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .hero-subtitle {
+        font-size: 1.25rem;
+        color: #374151;
+        margin-bottom: 2rem;
+        font-weight: 500;
+    }
+    .hero-cta {
+        display: flex;
+        gap: 1.2rem;
+        margin-bottom: 2.2rem;
+        flex-wrap: wrap;
+    }
+    .hero-stats {
+        display: flex;
+        gap: 2.2rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .stat {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 2px 12px rgba(102,126,234,0.09);
+        padding: 1.1rem 1.7rem;
+        text-align: center;
+        min-width: 110px;
+    }
+    .stat-number {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #667eea;
+    }
+    .stat-label {
+        font-size: 1rem;
+        color: #374151;
+    }
+    .hero-image {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+    }
+    .floating-card {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 8px 40px 0 rgba(102,126,234,0.13), 0 1.5px 8px 0 rgba(251,191,36,0.08);
+        padding: 1.2rem 1.5rem;
+        min-width: 180px;
+        max-width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.05rem;
+        transition: transform 0.2s;
+    }
+    .floating-card:hover {
+        transform: translateY(-8px) scale(1.04);
+        box-shadow: 0 12px 40px 0 rgba(102,126,234,0.18), 0 2px 12px 0 rgba(251,191,36,0.12);
+    }
+    .card-icon {
+        font-size: 2.2rem;
+        margin-bottom: 0.3rem;
+    }
+    .card-content h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 0.2rem;
+    }
+    .card-content p {
+        font-size: 0.98rem;
+        color: #374151;
+    }
+    .hero-wave {
+        margin-top: 2.5rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    @media (max-width: 900px) {
+        .hero-container {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .hero-image {
+            flex-direction: row;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .floating-card {
+            min-width: 140px;
+            max-width: 180px;
+            font-size: 0.95rem;
+        }
+        .hero-title {
+            font-size: 2.1rem;
+        }
+        .hero-subtitle {
+            font-size: 1.05rem;
+        }
+    }
+    @media (max-width: 600px) {
+        .hero-section {
+            padding-top: 4.5rem;
+            min-height: 90vh;
+        }
+        .hero-container {
+            flex-direction: column;
+            gap: 1.2rem;
+            padding: 0 8px;
+        }
+        .hero-title {
+            font-size: 1.3rem;
+        }
+        .hero-subtitle {
+            font-size: 0.95rem;
+        }
+        .hero-cta {
+            gap: 0.7rem;
+        }
+        .hero-stats {
+            gap: 1rem;
+        }
+        .floating-card {
+            min-width: 110px;
+            max-width: 140px;
+            font-size: 0.85rem;
+            padding: 0.7rem 0.9rem;
+        }
+        .card-icon {
+            font-size: 1.3rem;
+        }
+        .hero-wave {
+            margin-top: 1.2rem;
+        }
+    }
+
 
     .btn-primary:hover::before {
         left: 100%;
@@ -1156,9 +1395,8 @@
         pointer-events: none;
         transition: none;
     }
-    .timeline-step:hover .timeline-overlay {
-        /* No transition aquí, GSAP lo maneja */
-    }
+    /* .timeline-step:hover .timeline-overlay { }
+       (Regla vacía eliminada, GSAP maneja la animación) */
     .timeline-step > *:not(.timeline-overlay) {
         position: relative;
         z-index: 1;

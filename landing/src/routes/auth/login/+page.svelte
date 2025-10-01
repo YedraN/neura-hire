@@ -80,18 +80,30 @@
 </div>
 
 <style>
-.login-bg {
-  min-height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0; left: 0;
-  z-index: -1;
-  background: linear-gradient(120deg, #667eea 0%, #fbbf24 100%);
-  overflow: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .login-bg {
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: -1;
+    background: linear-gradient(120deg, #667eea 0%, #fbbf24 100%);
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 600px) {
+    .login-bg {
+      position: absolute;
+      overflow: hidden;
+      min-height: 100vh;
+      width: 100vw;
+      top: 0; left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 .login-bg::before {
   content: '';
   position: absolute;
@@ -243,64 +255,79 @@
     max-width: 98vw;
   }
 }
-.auth-form {
-  max-width: 650px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 3rem;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.auth-form-left {
-  flex: 2 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  border-right: 2px solid #e5e7eb;
-  padding-right: 2rem;
-}
-.auth-form-right {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  margin-left: 2rem;
-  align-items: flex-end;
-}
-.auth-form-right button {
-  align-self: flex-end;
-  min-width: 140px;
-}
-@media (max-width: 1000px) {
   .auth-form {
-    gap: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.5rem 2rem;
+    align-items: end;
+    background: rgba(255,255,255,0.95);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+    padding: 2.5rem 2rem;
   }
   .auth-form-left {
-    padding-right: 1rem;
-  }
-  .auth-form-right {
-    margin-left: 1rem;
-  }
-}
-@media (max-width: 800px) {
-  .auth-form {
+    display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: stretch;
-  }
-  .auth-form-left {
-    border-right: none;
-    padding-right: 0;
+    gap: 1.2rem;
+    border-right: 2px solid #e5e7eb;
+    padding-right: 2rem;
   }
   .auth-form-right {
-    margin-left: 0;
-    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-left: 2rem;
+    align-items: flex-end;
   }
   .auth-form-right button {
-    align-self: stretch;
+    align-self: flex-end;
+    min-width: 140px;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.7rem;
   }
-}
+  @media (max-width: 1000px) {
+    .auth-form {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      padding: 2rem 1rem;
+    }
+    .auth-form-left {
+      border-right: none;
+      padding-right: 0;
+    }
+    .auth-form-right {
+      margin-left: 0;
+      align-items: stretch;
+    }
+    .auth-form-right button {
+      align-self: stretch;
+    }
+  }
+  @media (max-width: 600px) {
+    .auth-form {
+      max-width: 98vw;
+      min-width: 0;
+      margin: 0 auto;
+      padding: 1rem 0.3rem;
+      gap: 0.7rem;
+      box-shadow: none;
+      border-radius: 0.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .auth-container {
+      min-width: 0;
+      margin: 0 auto;
+      padding: 1.2rem 0.5rem;
+      box-sizing: border-box;
+    }
+    .auth-form-right button {
+      font-size: 1rem;
+      padding: 0.6rem 1rem;
+      min-width: 100px;
+    }
+  }
 </style> 

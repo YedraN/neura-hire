@@ -79,18 +79,30 @@
 </div>
 
 <style>
-.login-bg {
-  min-height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0; left: 0;
-  z-index: -1;
-  background: linear-gradient(120deg, #667eea 0%, #fbbf24 100%);
-  overflow: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .login-bg {
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: -1;
+    background: linear-gradient(120deg, #667eea 0%, #fbbf24 100%);
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 600px) {
+    .login-bg {
+      position: absolute;
+      overflow: hidden;
+      min-height: 100vh;
+      width: 100vw;
+      top: 0; left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 .login-bg::before {
   content: '';
   position: absolute;
@@ -238,12 +250,13 @@
   max-width: 760px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.1rem 2.2rem;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem 2rem;
   align-items: end;
-}
-.auth-form-left, .auth-form-right {
-  display: contents;
+  background: rgba(255,255,255,0.95);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  padding: 2.5rem 2rem;
 }
 .auth-form label {
   margin-bottom: 0.2rem;
@@ -256,6 +269,9 @@
 .btn-gradient {
   margin-top: 0.2rem;
   min-width: 140px;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.7rem;
 }
 .auth-form .btn-gradient {
   grid-column: 2;
@@ -267,7 +283,8 @@
 @media (max-width: 900px) {
   .auth-form {
     grid-template-columns: 1fr;
-    gap: 0.7rem;
+    gap: 1.2rem;
+    padding: 2rem 1rem;
   }
   .auth-form .btn-gradient {
     grid-column: 1;
@@ -275,6 +292,30 @@
   }
   .auth-error {
     grid-column: 1;
+  }
+}
+@media (max-width: 600px) {
+  .auth-form {
+    max-width: 98vw;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 1rem 0.3rem;
+    gap: 0.7rem;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .auth-container {
+    min-width: 0;
+    margin: 0 auto;
+    padding: 1.2rem 0.5rem;
+    box-sizing: border-box;
+  }
+  .btn-gradient {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    min-width: 100px;
   }
 }
 </style> 
