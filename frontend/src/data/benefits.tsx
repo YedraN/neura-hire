@@ -4,69 +4,69 @@ import { IBenefit } from "@/types"
 
 export const benefits: IBenefit[] = [
     {
-        title: "Smart Budgeting",
-        description: "Take the guesswork out of managing your money. Our AI-powered budgeting tool adapts to your lifestyle and helps you stay on track.",
+        title: "Automatización de procesos de RRHH",
+        description: "Reduce tareas manuales: reclutamiento, entrevistas y onboarding automatizados para que tu equipo se enfoque en lo estratégico.",
         bullets: [
             {
-                title: "Intelligent Categorization",
-                description: "Automatically sorts your transactions for crystal-clear insights.",
-                icon: <FiBarChart2 size={26} />
-            },
-            {
-                title: "Customizable Goals",
-                description: "Set and track financial objectives that matter to you.",
-                icon: <FiTarget size={26} />
-            },
-            {
-                title: "Predictive Analysis",
-                description: "Get ahead of your finances with spending forecasts and alerts.",
-                icon: <FiTrendingUp size={26} />
-            }
-        ],
-        imageSrc: "/images/mockup-1.webp"
-    },
-    {
-        title: "Seamless Investing",
-        description: "Start building wealth today, no financial degree required. Finwise makes investing accessible and straightforward.",
-        bullets: [
-            {
-                title: "Micro-Investing",
-                description: "Begin with as little as $1 and watch your money grow.",
-                icon: <FiDollarSign size={26} />
-            },
-            {
-                title: "Expert Portfolios",
-                description: "Choose from investment strategies tailored to your risk tolerance.",
+                title: "Publicación multicanal",
+                description: "Publica vacantes en múltiples portales con un solo clic y recibe candidatos centralizados.",
                 icon: <FiBriefcase size={26} />
             },
             {
-                title: "Real-Time Performance",
-                description: "Track your investments with easy-to-understand metrics and visuals.",
-                icon: <FiPieChart size={26} />
+                title: "Flujos de aprobación",
+                description: "Crea procesos de selección y onboarding con pasos automatizados y recordatorios.",
+                icon: <FiBarChart2 size={26} />
+            },
+            {
+                title: "Integraciones HRIS",
+                description: "Conecta con sistemas de nómina y gestión de empleados para sincronización automática.",
+                icon: <FiTrendingUp size={26} />
             }
         ],
-        imageSrc: "/images/mockup-2.webp"
+        imageSrc: ""
     },
     {
-        title: "Bank-Grade Security",
-        description: "Your financial data deserves the best protection. Rest easy knowing Finwise employs cutting-edge security measures.",
+        title: "Decisiones inteligentes de talento",
+        description: "Analítica y scoring impulsados por IA para identificar candidatos y empleados con mayor potencial y riesgo de rotación.",
         bullets: [
             {
-                title: "Military-Grade Encryption",
-                description: "Your information is safeguarded with the highest level of encryption.",
+                title: "Score de candidatos",
+                description: "Ranking automático según fit cultural, habilidades y experiencia.",
+                icon: <FiTarget size={26} />
+            },
+            {
+                title: "Análisis de rotación",
+                description: "Alertas tempranas basadas en métricas de engagement y desempeño.",
+                icon: <FiPieChart size={26} />
+            },
+            {
+                title: "Informes personalizables",
+                description: "Dashboards con insights para RRHH y dirección.",
+                icon: <FiBarChart2 size={26} />
+            }
+        ],
+        imageSrc: ""
+    },
+    {
+        title: "Seguridad y cumplimiento",
+        description: "Protección de datos de empleados y cumplimiento normativo para empresas de todos los tamaños.",
+        bullets: [
+            {
+                title: "Encriptación y controles",
+                description: "Acceso y almacenamiento seguros para los datos sensibles.",
                 icon: <FiLock size={26} />
             },
             {
-                title: "Biometric Authentication",
-                description: "Access your account securely with fingerprint or facial recognition.",
+                title: "Permisos por rol",
+                description: "Control granular sobre quién puede ver y editar información.",
                 icon: <FiUser size={26} />
             },
             {
-                title: "Real-Time Fraud Detection",
-                description: "Our system constantly monitors for suspicious activity to keep your money safe.",
+                title: "Auditoría y registros",
+                description: "Historial de cambios y eventos para auditorías internas.",
                 icon: <FiShield size={26} />
             }
         ],
-        imageSrc: "/images/mockup-1.webp"
+        imageSrc: ""
     },
 ]

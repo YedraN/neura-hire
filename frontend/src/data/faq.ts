@@ -3,23 +3,23 @@ import { siteDetails } from "./siteDetails";
 
 export const faqs: IFAQ[] = [
     {
-        question: `Is ${siteDetails.siteName} secure?`,
-        answer: 'Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security.',
+        question: `¿Es seguro ${siteDetails.siteName}?`,
+        answer: 'Sí. NeuraHire cifra los datos de los empleados y ofrece controles de acceso por rol para mantener la confidencialidad y el cumplimiento.',
     },
     {
-        question: `Can I use ${siteDetails.siteName} on multiple devices?`,
-        answer: 'Absolutely! Your Finwise account syncs seamlessly across all your devices - smartphone, tablet, and computer.',
+        question: `¿Puedo usar ${siteDetails.siteName} en varios dispositivos?`,
+        answer: 'Sí. La plataforma sincroniza la información en tiempo real entre la web y dispositivos móviles.',
     },
     {
-        question: 'Can I connect all my bank accounts?',
-        answer: `Yes! ${siteDetails.siteName} supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts.`
+        question: '¿Se integra con mi sistema de nómina o HRIS?',
+        answer: `En la mayoría de los casos sí. Ofrecemos integraciones estándar y opciones a medida para conectar con los principales HRIS del mercado.`
     },
     {
-        question: 'Do I need any financial expertise to use the investing features?',
-        answer: 'Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level.',
+        question: '¿Necesito formación para usar la plataforma?',
+        answer: 'No necesariamente. La interfaz es intuitiva y ofrecemos guías y soporte. Para planes Enterprise ofrecemos formación presencial o remota.',
     },
     {
-        question: 'What if I need help using the app?',
-        answer: 'Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Finwise.'
+        question: '¿Qué soporte ofrecen?',
+        answer: 'Soporte por email para todos los planes y soporte prioritario/SLA para planes Growth y Enterprise.'
     }
 ];

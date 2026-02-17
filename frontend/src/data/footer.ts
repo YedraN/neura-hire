@@ -7,23 +7,23 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: "Empowering businesses with cutting-edge financial technology solutions.",
+    subheading: "Complementa a tu equipo de RRHH con automatización, IA y analítica.",
     quickLinks: [
         {
-            text: "Features",
+            text: "Características",
             url: "#features"
         },
         {
-            text: "Pricing",
+            text: "Precios",
             url: "#pricing"
         },
         {
-            text: "Testimonials",
+            text: "Testimonios",
             url: "#testimonials"
         }
     ],
-    email: 'address@yoursite.com',
-    telephone: '+1 (123) 456-7890',
+    email: 'hola@neura-hire.com',
+    telephone: '+34 600 000 000',
     socials: {
         // github: 'https://github.com',
         // x: 'https://twitter.com/x',

@@ -7,16 +7,16 @@ export const stats: IStats[] = [
     {
         title: "20M+",
         icon: <BsBarChartFill size={34} className="text-blue-500" />,
-        description: "Transactions processed securely every day, providing real-time insights."
+        description: "Procesos de RRHH automatizados ejecutados mensualmente."
     },
     {
         title: "5.0",
         icon: <BsFillStarFill size={34} className="text-yellow-500" />,
-        description: "Star rating, consistently maintained across app stores."
+        description: "Satisfacción media de clientes (NPS) en nuestras implementaciones."
     },
     {
         title: "200+ ",
         icon: <PiGlobeFill size={34} className="text-green-600" />,
-        description: "Financial Institutions, seamlessly integrated, so you can manage all accounts."
+        description: "Integraciones con HRIS y herramientas de nómina compatibles globalmente."
     }
 ];

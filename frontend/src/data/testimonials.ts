@@ -3,21 +3,21 @@ import { siteDetails } from "./siteDetails";
 
 export const testimonials: ITestimonial[] = [
     {
-        name: 'John Smith',
-        role: 'CEO at Company',
-        message: `${siteDetails.siteName}'s AI-driven insights have transformed how we approach financial planning for our clients. It's an invaluable resource in the modern financial landscape.`,
-        avatar: '/images/testimonial-1.webp',
+        name: 'María García',
+        role: 'Responsable de Talento',
+        message: `${siteDetails.siteName} nos permitió reducir el tiempo de contratación en un 40% gracias a sus flujos automatizados.`,
+        avatar: '',
     },
     {
-        name: 'Jane Doe',
-        role: 'CTO at Startup',
-        message: `As a CTO, I'm impressed by ${siteDetails.siteName}'s robust security measures and seamless integrations. It's rare to find an app that balances user-friendliness with such advanced technology.`,
-        avatar: '/images/testimonial-2.webp',
+        name: 'Carlos Pérez',
+        role: 'Director de RRHH',
+        message: `La analítica de NeuraHire nos ayuda a identificar riesgos de rotación y a priorizar acciones desde el primer mes.`,
+        avatar: '',
     },
     {
-        name: 'Emily Johnson',
-        role: 'Product Manager',
-        message: `${siteDetails.siteName} is revolutionizing personal finance management. Its intuitive design and powerful features make it an indispensable tool for anyone serious about financial growth.`,
-        avatar: '/images/testimonial-3.webp',
+        name: 'Ana López',
+        role: 'Talent Partner',
+        message: `Integrar NeuraHire con nuestro HRIS fue sencillo y la adopción del equipo fue inmediata.`,
+        avatar: '',
     },
 ];

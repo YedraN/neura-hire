@@ -19,16 +19,16 @@ const HomePage: React.FC = () => {
 
         <Section
           id="pricing"
-          title="Pricing"
-          description="Simple, transparent pricing. No surprises."
+          title="Precios"
+          description="Precios claros y adaptables a equipos de todos los tamaños."
         >
           <Pricing />
         </Section>
 
         <Section
           id="testimonials"
-          title="What Our Clients Say"
-          description="Hear from those who have partnered with us."
+          title="Testimonios"
+          description="Lo que los equipos de RRHH dicen tras usar NeuraHire."
         >
           <Testimonials />
         </Section>

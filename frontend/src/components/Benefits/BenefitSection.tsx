@@ -88,7 +88,15 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
 
                 <div className={clsx("mt-5 lg:mt-0", { "lg:order-2": imageAtRight })}>
                     <div className={clsx("w-fit flex", { "justify-start": imageAtRight, "justify-end": !imageAtRight })}>
-                        <Image src={imageSrc} alt="title" width="384" height="762" quality={100} className="lg:ml-0" />
+                        {imageSrc ? (
+                            <Image src={imageSrc} alt={title} width={384} height={762} quality={100} className="lg:ml-0" />
+                        ) : (
+                            <div className="w-72 h-44 rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-16 h-16 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M8 7v10M16 7v10M12 3v4" />
+                                </svg>
+                            </div>
+                        )}
                     </div>
                 </div>
             </motion.div>

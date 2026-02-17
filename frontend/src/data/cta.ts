@@ -1,6 +1,6 @@
 export const ctaDetails = {
-    heading: 'Join Over 1 Million Users To Transform Your Finances',
-    subheading: 'Your journey to financial freedom starts here. Download Finwise today and take the first step towards a brighter financial future!',
+    heading: 'Prueba NeuraHire gratis durante 14 días',
+    subheading: 'Mejora la eficiencia de tu equipo de RRHH desde el primer día. Sin tarjeta, sin complicaciones.',
     appStoreUrl: '#',
     googlePlayUrl: '#'
 }

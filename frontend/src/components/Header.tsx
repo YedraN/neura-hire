@@ -40,14 +40,14 @@ const Header: React.FC = () => {
                         ))}
                         <li>
                             <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
-                                Download
+                                Prueba gratis
                             </Link>
                         </li>
                     </ul>
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden flex items-center">
-                        <button
+                            <button
                             onClick={toggleMenu}
                             type="button"
                             className="bg-primary text-black focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
                             ) : (
                                 <HiBars3 className="h-6 w-6" aria-hidden="true" />
                             )}
-                            <span className="sr-only">Toggle navigation</span>
+                            <span className="sr-only">Alternar navegación</span>
                         </button>
                     </div>
                 </nav>
@@ -86,7 +86,7 @@ const Header: React.FC = () => {
                         ))}
                         <li>
                             <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-5 py-2 rounded-full block w-fit" onClick={toggleMenu}>
-                                Get Started
+                                Comenzar prueba
                             </Link>
                         </li>
                     </ul>

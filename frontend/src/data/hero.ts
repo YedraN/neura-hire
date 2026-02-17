@@ -1,5 +1,5 @@
 export const heroDetails = {
-    heading: 'Smart, Secure, Simple Financial Management',
-    subheading: 'From effortless budgeting to real-time investment insights, Finwise puts you in control of your money like never before',
-    centerImageSrc: '/images/hero-mockup.webp',
+    heading: 'Complementa a tu equipo de RRHH con IA y automatización',
+    subheading: 'NeuraHire agiliza contratación, onboarding y retención con flujos automáticos, análisis de talento y herramientas colaborativas para equipos de recursos humanos.',
+    centerImageSrc: '',
 }
